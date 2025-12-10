@@ -8,16 +8,11 @@
 import Cocoa
 
 class OpenFileWindowController: NSWindowController {
+    @IBOutlet var dragView: DragDestinationView!
 
-    @IBOutlet weak var dragView: DragDestinationView!
-
-    public var openCallback: ((_ url: URL) -> Void)? {
+    var openCallback: ((_ url: URL) -> Void)? {
         didSet {
             dragView.dropCallback = openCallback
         }
-    }
-
-    override func windowDidLoad() {
-        super.windowDidLoad()
     }
 }

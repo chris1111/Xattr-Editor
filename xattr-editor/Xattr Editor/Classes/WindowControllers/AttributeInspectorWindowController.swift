@@ -8,14 +8,13 @@
 import Cocoa
 
 class AttributeInspectorWindowController: NSWindowController {
-
     // MARK: Properties
 
-    @IBOutlet weak var tableView: NSTableView?
-    @IBOutlet weak var attributeValueField: NSTextView!
-    @IBOutlet weak var refreshButton: NSButton!
-    @IBOutlet weak var addButton: NSButton!
-    @IBOutlet weak var removeButton: NSButton!
+    @IBOutlet var tableView: NSTableView?
+    @IBOutlet var attributeValueField: NSTextView!
+    @IBOutlet var refreshButton: NSButton!
+    @IBOutlet var addButton: NSButton!
+    @IBOutlet var removeButton: NSButton!
 
     fileprivate var fileAttributes: Array? = [Attribute]()
 
@@ -25,10 +24,10 @@ class AttributeInspectorWindowController: NSWindowController {
         }
     }
 
-    public var fileURL: URL? {
+    var fileURL: URL? {
         didSet {
             window?.title = fileURL?.lastPathComponent ?? "-"
-            self.refresh(nil)
+            refresh(nil)
         }
     }
 
@@ -66,7 +65,7 @@ class AttributeInspectorWindowController: NSWindowController {
 
     func showErrorModal(_ error: NSError) {
         let alert = NSAlert()
-        alert.messageText = "Error code: \(error.code)"
+        alert.messageText = String(format: NSLocalizedString("error_code", comment: "Error code message"), error.code)
         alert.informativeText = error.domain
         alert.alertStyle = .critical
         alert.runModal()
@@ -74,7 +73,7 @@ class AttributeInspectorWindowController: NSWindowController {
 
     // MARK: Actions
 
-    @IBAction func saveExtendedAttributes(_ sender: AnyObject?) {
+    @IBAction func saveExtendedAttributes(_: AnyObject?) {
         guard let attributes = fileAttributes else { return }
         guard let url = fileURL else { return }
 
@@ -82,35 +81,36 @@ class AttributeInspectorWindowController: NSWindowController {
             do {
                 try url.removeAttribute(name: attribute.originalName)
                 try url.setAttribute(name: attribute.name, value: attribute.value ?? "")
+                // Update original values after successful save to prevent re-attempting the same operation
+                attribute.updateOriginalValues()
             } catch let error as NSError {
                 showErrorModal(error)
             }
         }
     }
 
-    @IBAction func refresh(_ sender: AnyObject?) {
+    @IBAction func refresh(_: AnyObject?) {
         do {
             try fileAttributes = readExtendedAttributes(fromURL: fileURL)
             tableView?.reloadData()
         } catch let error as NSError {
             showErrorModal(error)
         }
-
     }
 
-    @IBAction func addAttribute(_ sender: AnyObject?) {
+    @IBAction func addAttribute(_: AnyObject?) {
         guard let url = fileURL else { return }
 
         let alert = NSAlert()
-        alert.messageText = "Extended attribute name:"
-        alert.addButton(withTitle: "Ok")
-        alert.addButton(withTitle: "Cancel")
+        alert.messageText = NSLocalizedString("add_attribute_title", comment: "Add attribute dialog title")
+        alert.addButton(withTitle: NSLocalizedString("ok", comment: "Ok button"))
+        alert.addButton(withTitle: NSLocalizedString("cancel", comment: "Cancel button"))
 
         let inputField = NSTextField(frame: NSRect(x: 0, y: 0, width: 200, height: 24))
         inputField.bezelStyle = .roundedBezel
         alert.accessoryView = inputField
 
-        alert.beginSheetModal(for: self.window!) { [weak self] response in
+        alert.beginSheetModal(for: window!) { [weak self] response in
             if response == .alertSecondButtonReturn || inputField.stringValue.isEmpty {
                 return
             }
@@ -124,13 +124,21 @@ class AttributeInspectorWindowController: NSWindowController {
         }
     }
 
-    @IBAction func removeAttribute(_ sender: AnyObject?) {
-        guard let attrubute = selectedAttribute else { return }
+    @IBAction func removeAttribute(_: AnyObject?) {
+        guard let attribute = selectedAttribute else { return }
         guard let url = fileURL else { return }
 
         do {
-            try url.removeAttribute(name: attrubute.name)
+            let attributeName = attribute.name
+            try url.removeAttribute(name: attributeName)
             refresh(nil)
+
+            // Show success feedback
+            let alert = NSAlert()
+            alert.messageText = NSLocalizedString("attribute_removed_title", comment: "Attribute removed title")
+            alert.informativeText = String(format: NSLocalizedString("attribute_removed_message", comment: "Attribute removed message"), attributeName)
+            alert.alertStyle = .informational
+            alert.runModal()
         } catch let error as NSError {
             showErrorModal(error)
         }
@@ -138,8 +146,7 @@ class AttributeInspectorWindowController: NSWindowController {
 }
 
 extension AttributeInspectorWindowController: NSTableViewDelegate {
-
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+    func tableView(_ tableView: NSTableView, viewFor _: NSTableColumn?, row: Int) -> NSView? {
         guard let attr = fileAttributes?[row] else {
             return nil
         }
@@ -157,7 +164,7 @@ extension AttributeInspectorWindowController: NSTableViewDelegate {
         return nil
     }
 
-    func tableViewSelectionDidChange(_ notification: Notification) {
+    func tableViewSelectionDidChange(_: Notification) {
         guard let tblView = tableView else { return }
 
         if tblView.selectedRow == -1 {
@@ -167,19 +174,15 @@ extension AttributeInspectorWindowController: NSTableViewDelegate {
 
         selectedAttribute = fileAttributes?[tblView.selectedRow]
     }
-
 }
 
 extension AttributeInspectorWindowController: NSTableViewDataSource {
-
-    func numberOfRows(in tableView: NSTableView) -> Int {
+    func numberOfRows(in _: NSTableView) -> Int {
         return fileAttributes?.count ?? 0
     }
-
 }
 
 extension AttributeInspectorWindowController: NSTextDelegate {
-
     func textDidChange(_ notification: Notification) {
         guard let editor = notification.object as? NSTextView else { return }
         guard let attribute = selectedAttribute else { return }
@@ -188,7 +191,7 @@ extension AttributeInspectorWindowController: NSTextDelegate {
         selectedAttribute!.value = editor.string
     }
 
-    func textDidEndEditing(_ notification: Notification) {
+    func textDidEndEditing(_: Notification) {
         saveExtendedAttributes(nil)
     }
 }

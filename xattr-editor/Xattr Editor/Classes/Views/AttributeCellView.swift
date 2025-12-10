@@ -8,8 +8,7 @@
 import Cocoa
 
 class AttributeCellView: NSTableCellView {
-
-    public var attributeDidChangeCallback: (() -> Void)?
+    var attributeDidChangeCallback: (() -> Void)?
 
     var attribute: Attribute? {
         didSet {
@@ -30,5 +29,4 @@ class AttributeCellView: NSTableCellView {
         attribute.name = sender.stringValue
         callback()
     }
-
 }

@@ -13,7 +13,6 @@ import ObjectiveC
 var lineNumberViewAssociatedObjectKey: UInt8 = 0
 
 extension NSTextView {
-
     var lineNumberView: LineNumberView? {
         get {
             return objc_getAssociatedObject(self, &lineNumberViewAssociatedObjectKey) as? LineNumberView
@@ -52,15 +51,15 @@ extension NSTextView {
                                                object: self)
     }
 
-    @objc func textView_frameDidChange(notification: NSNotification) {
+    @objc func textView_frameDidChange(notification _: NSNotification) {
         lineNumberView?.needsDisplay = true
     }
 
-    @objc func textView_textDidChange(notification: NSNotification) {
+    @objc func textView_textDidChange(notification _: NSNotification) {
         lineNumberView?.needsDisplay = true
     }
 
-    @objc func textView_selectionDidChange(notification: NSNotification) {
+    @objc func textView_selectionDidChange(notification _: NSNotification) {
         lineNumberView?.needsDisplay = true
     }
 }

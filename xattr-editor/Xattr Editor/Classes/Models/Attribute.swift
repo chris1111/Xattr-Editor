@@ -6,8 +6,8 @@
 //
 
 class Attribute {
-    let originalName: String
-    let originalValue: String?
+    var originalName: String
+    var originalValue: String?
 
     var name: String
     var value: String?
@@ -16,10 +16,15 @@ class Attribute {
     }
 
     init(name: String, value: String? = nil) {
-        self.originalName = name
+        originalName = name
         self.name = name
 
-        self.originalValue = value
+        originalValue = value
         self.value = value
+    }
+
+    func updateOriginalValues() {
+        originalName = name
+        originalValue = value
     }
 }

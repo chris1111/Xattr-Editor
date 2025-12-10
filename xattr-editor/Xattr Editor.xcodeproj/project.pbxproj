@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		118101C2212FEC4200B0BDEF /* NSTextView+LineNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118101C1212FEC4200B0BDEF /* NSTextView+LineNumber.swift */; };
 		118101C4212FEC7200B0BDEF /* LineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118101C3212FEC7200B0BDEF /* LineNumberView.swift */; };
+		47CD50BB40FE331F673DB858 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09FEBBDB493296B625F15386 /* Localizable.strings */; };
 		A101B0121E35FFF500C432C6 /* DragDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101B0111E35FFF500C432C6 /* DragDestinationView.swift */; };
 		FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0C1E336D0800908B25 /* Assets.xcassets */; };
 		FB8A8B101E336D0800908B25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0E1E336D0800908B25 /* MainMenu.xib */; };
@@ -26,6 +27,7 @@
 		118101C1212FEC4200B0BDEF /* NSTextView+LineNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+LineNumber.swift"; sourceTree = "<group>"; };
 		118101C3212FEC7200B0BDEF /* LineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumberView.swift; sourceTree = "<group>"; };
 		A101B0111E35FFF500C432C6 /* DragDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDestinationView.swift; sourceTree = "<group>"; };
+		EC29F5F764AA19394D28F707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB8A8B071E336D0800908B25 /* Xattr Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xattr Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8A8B0C1E336D0800908B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB8A8B0F1E336D0800908B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				FBC0D2BF1E34BA6100A3E79B /* Classes */,
 				FB8A8B0C1E336D0800908B25 /* Assets.xcassets */,
+				09FEBBDB493296B625F15386 /* Localizable.strings */,
 				FB8A8B0E1E336D0800908B25 /* MainMenu.xib */,
 				FB8A8B111E336D0800908B25 /* Info.plist */,
 			);
@@ -175,7 +178,7 @@
 			};
 			buildConfigurationList = FB8A8B021E336D0800908B25 /* Build configuration list for PBXProject "Xattr Editor" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -199,6 +202,7 @@
 				FBC0D2CE1E34BA6100A3E79B /* AttributeInspectorWindow.xib in Resources */,
 				FBC0D2D01E34BA6100A3E79B /* OpenFileWindow.xib in Resources */,
 				FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */,
+				47CD50BB40FE331F673DB858 /* Localizable.strings in Resources */,
 				FB8A8B101E336D0800908B25 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +212,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		A164B44121333C6600E11E3F /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -246,6 +251,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		09FEBBDB493296B625F15386 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC29F5F764AA19394D28F707 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FB8A8B0E1E336D0800908B25 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,8 +373,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -370,10 +385,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "Xattr Editor/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.Xattr-Editor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rcsiko.Xattr-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -384,10 +405,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "Xattr Editor/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.Xattr-Editor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rcsiko.Xattr-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};

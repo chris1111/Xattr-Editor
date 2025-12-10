@@ -15,11 +15,10 @@ extension NSPasteboard.PasteboardType {
         } else {
             return NSPasteboard.PasteboardType(kUTTypeFileURL as String)
         }
-    } ()
+    }()
 }
 
 class DragDestinationView: NSView {
-
     var dropCallback: ((_ url: URL) -> Void)?
 
     private enum Appearance {
@@ -36,8 +35,7 @@ class DragDestinationView: NSView {
         registerForDraggedTypes([.backwardsCompatibleFileURL])
     }
 
-    override func draw(_ dirtyRect: NSRect) {
-
+    override func draw(_: NSRect) {
         if !isReceivingDrag {
             return
         }
@@ -49,21 +47,20 @@ class DragDestinationView: NSView {
         path.stroke()
     }
 
-    override func hitTest(_ aPoint: NSPoint) -> NSView? {
+    override func hitTest(_: NSPoint) -> NSView? {
         return nil
     }
 
-    override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
+    override func draggingEntered(_: NSDraggingInfo) -> NSDragOperation {
         isReceivingDrag = true
         return .copy
     }
 
-    override func draggingExited(_ sender: NSDraggingInfo?) {
+    override func draggingExited(_: NSDraggingInfo?) {
         isReceivingDrag = false
     }
 
     override func performDragOperation(_ draggingInfo: NSDraggingInfo) -> Bool {
-
         isReceivingDrag = false
         let pasteBoard = draggingInfo.draggingPasteboard
 
@@ -77,5 +74,4 @@ class DragDestinationView: NSView {
 
         return false
     }
-
 }

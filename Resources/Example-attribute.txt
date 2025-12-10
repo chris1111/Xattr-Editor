@@ -1,0 +1,6 @@
+{
+"inspectorMode" : false
+"logLevel" : "error"
+"language" : "en-US"
+"description" : "This is an example to test the functionality of adding / removing / saving extended attributes"
+}

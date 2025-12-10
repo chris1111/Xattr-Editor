@@ -24,40 +24,41 @@ extension URL {
     }
 
     func removeAttribute(name: String) throws {
-        if removexattr(self.path, name, 0) == xattrResultError {
+        if removexattr(path, name, 0) == xattrResultError {
             throw NSError(domain: String(cString: strerror(errno)), code: Int(errno), userInfo: nil)
         }
     }
 
     func getAttribute(name: String) throws -> String? {
-        let length = getxattr(self.path, name, nil, 0, 0, 0)
+        let length = getxattr(path, name, nil, 0, 0, 0)
         if length == -1 {
             throw NSError(domain: String(cString: strerror(errno)), code: Int(errno), userInfo: nil)
         }
 
         let bytes = UnsafeMutableRawPointer.allocate(byteCount: length, alignment: 0)
-        if getxattr(self.path, name, bytes, length, 0, 0) == -1 {
+        if getxattr(path, name, bytes, length, 0, 0) == -1 {
             throw NSError(domain: String(cString: strerror(errno)), code: Int(errno), userInfo: nil)
         }
 
-        return (String(data: NSData(bytes: bytes, length: length) as Data,
-                       encoding: String.Encoding.utf8))
+        return String(data: NSData(bytes: bytes, length: length) as Data,
+                      encoding: String.Encoding.utf8)
     }
 
     func attributes() throws -> [String: String?]? {
-        let length = listxattr(self.path, nil, 0, 0)
+        let length = listxattr(path, nil, 0, 0)
         if length == -1 {
             throw NSError(domain: String(cString: strerror(errno)), code: Int(errno), userInfo: nil)
         }
 
         let bytes = UnsafeMutablePointer<Int8>.allocate(capacity: length)
 
-        if listxattr(self.path, bytes, length, 0) == Int(xattrResultError) {
+        if listxattr(path, bytes, length, 0) == Int(xattrResultError) {
             throw NSError(domain: String(cString: strerror(errno)), code: Int(errno), userInfo: nil)
         }
 
         if var names = NSString(bytes: bytes, length: length,
-                                encoding: String.Encoding.utf8.rawValue)?.components(separatedBy: "\0") {
+                                encoding: String.Encoding.utf8.rawValue)?.components(separatedBy: "\0")
+        {
             names.removeLast()
             var attributes: [String: String?] = [:]
             for name in names {
@@ -68,5 +69,4 @@ extension URL {
 
         return nil
     }
-
 }

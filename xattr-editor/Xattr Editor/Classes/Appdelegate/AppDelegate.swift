@@ -9,13 +9,14 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    let openWindowController = OpenFileWindowController(windowNibName: "OpenFileWindow")
+    let openWindowController = OpenFileWindowController(
+        windowNibName: "OpenFileWindow")
     var inspectorWindowControllers = [NSWindowController]()
 
     func openFileAttributeInspector(forFile fileURL: URL) {
         let attributeInspectorWindowController =
-            AttributeInspectorWindowController(windowNibName: "AttributeInspectorWindow")
+            AttributeInspectorWindowController(
+                windowNibName: "AttributeInspectorWindow")
         inspectorWindowControllers.append(attributeInspectorWindowController)
 
         attributeInspectorWindowController.fileURL = fileURL
@@ -23,9 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         openWindowController.close()
     }
 
-    @IBAction func showOpenDialog(_ sender: AnyObject) {
-
-        let fileDialog: NSOpenPanel = NSOpenPanel()
+    @IBAction func showOpenDialog(_: AnyObject) {
+        let fileDialog = NSOpenPanel()
         fileDialog.runModal()
 
         if let url = fileDialog.url {
@@ -33,15 +33,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-
+    func applicationDidFinishLaunching(_: Notification) {
         openWindowController.showWindow(nil)
         openWindowController.openCallback = { [weak self] url in
             self?.openFileAttributeInspector(forFile: url)
         }
     }
 
-    func application(_ sender: NSApplication, openFile filename: String) -> Bool {
+    func application(_: NSApplication, openFile filename: String) -> Bool {
         let url = URL(fileURLWithPath: filename)
 
         openFileAttributeInspector(forFile: url)
@@ -49,12 +48,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 
-    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+    func applicationShouldHandleReopen(
+        _: NSApplication, hasVisibleWindows flag: Bool
+    ) -> Bool {
         if flag {
             return false
         } else {
             openWindowController.window?.makeKeyAndOrderFront(nil)
             return true
         }
+    }
+
+    func applicationSupportsSecureRestorableState(_: NSApplication) -> Bool {
+        return true
     }
 }
