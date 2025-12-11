@@ -11,7 +11,7 @@ But in Sequoia and Tahoe, the warning is more serious and might upset the user:
 > App is damaged and can't be opened.<br>
 You should move it to the Trash.
 
-For example, For example, in the first opening of Download Full Installer you can see:
+For example, in the first opening of Download Full Installer you can see:
 
 <img src="../Images/xattr1.png" width="480px">
 
@@ -59,7 +59,7 @@ By clicking `Open Anyway`, macOS will ask again if you want to open the file and
 
 ## Xattr Editor
 
-Xattr Editor is a simple GUI application to view/edit extended file attributes on macOS, See the [README](../README.md) for information.
+Xattr Editor is a simple GUI application to view/edit extended file attributes on macOS, see the [README](../README.md) for information.
 
 ## Result
 
