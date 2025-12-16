@@ -24,6 +24,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         openWindowController.close()
     }
 
+    func handleInspectorWindowClose(_ windowController: NSWindowController) {
+        // Remove the closed window controller from the array
+        inspectorWindowControllers.removeAll { $0 === windowController }
+
+        // If no inspector windows are open, show the open file window
+        if inspectorWindowControllers.isEmpty {
+            openWindowController.showWindow(nil)
+        }
+    }
+
     @IBAction func showOpenDialog(_: AnyObject) {
         let fileDialog = NSOpenPanel()
         fileDialog.runModal()
@@ -42,9 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func application(_: NSApplication, openFile filename: String) -> Bool {
         let url = URL(fileURLWithPath: filename)
-
         openFileAttributeInspector(forFile: url)
-
         return true
     }
 
