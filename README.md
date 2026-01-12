@@ -23,3 +23,16 @@ You can add, rename, delete, or modify properties of existing attributes.
 When removing an attribute, the user receives feedback. E.g., removing the com.apple.quarantine attribute:
 
 ![App](Images/App3.png)
+
+## Credits
+
+*rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created my own repository based on the original, which contains the most important part of the source code, bringing it up to date:
+
+- Add app icon in Assets.xcassets
+- Fix `swiftlint` warnings and refactor Swift code
+- Add user feedback (alert) for attribute removal
+- Fix error warning in attribute renaming
+- Clear the attribute value field when deleting attributes
+- Re-show drop file window when closing attribute inspector
+- Improve README and documentation
+- Update scsreenshots.
