@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Xattr Editor
+
+  English localization
+*/
+
+/* Error messages */
+"error_code" = "Error code: %d";
+"error_title" = "Error";
+
+/* Add attribute dialog */
+"add_attribute_title" = "Extended attribute name:";
+"ok" = "OK";
+"cancel" = "Cancel";
+
+/* Success messages */
+"attribute_removed_title" = "Attribute Removed";
+"attribute_removed_message" = "The attribute '%@' has been successfully removed.";
