@@ -1,7 +1,5 @@
 # SwiftUI Migration Summary
 
-## What Was Done
-
 ### 1. Created New SwiftUI Architecture
 
 #### XattrEditorApp.swift
@@ -53,39 +51,39 @@
 
 - Added references to new SwiftUI files
 - Removed references to XIB files from build phases
-- Updated `MACOSX_DEPLOYMENT_TARGET` from 10.12/10.13 to 11.0
+- Updated `MACOSX_DEPLOYMENT_TARGET` from 10.12/10.13 to 14.0
 - Updated `SWIFT_VERSION` from 4.2 to 5.9
 - Cleaned up old file references
 
 ### 3. Preserved Features
 
-✅ Drag-and-drop file selection
-✅ Extended attribute viewing
-✅ Add/remove attributes
-✅ Edit attribute names
-✅ Edit attribute values
-✅ Localized strings support
-✅ Error handling with user-friendly alerts
-✅ Refresh functionality
-✅ Multi-file support (via tabs)
+- Drag-and-drop file selection
+- Extended attribute viewing
+- Add/remove attributes
+- Edit attribute names
+- Edit attribute values
+- Localized strings support
+- Error handling with user-friendly alerts
+- Refresh functionality
+- Multi-file support (via tabs)
 
 ### 4. Features Not Yet Reimplemented
 
-❌ Line numbers in text editor
+Line numbers in text editor
 
   - SwiftUI's TextEditor doesn't support line numbers natively
   - Would require custom implementation
   - The underlying URL+XAttr extension still works fine
 
-❌ Multiple separate inspector windows
+Multiple separate inspector windows
 
   - Changed to tab-based interface instead
   - More modern SwiftUI approach
   - Could be added back with Window scene API if desired
 
-### 6. Files Deprecated (Still in Repo)
+### 6. Files Deprecated
 
-These files are no longer used but remain for reference:
+These files are no longer used:
 
 - MainMenu.xib
 - AttributeInspectorWindow.xib
@@ -119,14 +117,6 @@ These files are no longer used but remain for reference:
 - `HSplitView` for split panes
 - `TabView` for multiple documents
 - Alert modifiers for dialogs
-
-### Architecture Benefits
-
-1. **Declarative UI**: Views automatically update when state changes
-2. **Type Safety**: Compile-time checking of UI elements
-3. **Less Code**: SwiftUI requires significantly less boilerplate
-4. **Modern APIs**: Uses latest Apple frameworks
-5. **Better Maintainability**: Clearer separation of concerns
 
 ## Testing Notes
 

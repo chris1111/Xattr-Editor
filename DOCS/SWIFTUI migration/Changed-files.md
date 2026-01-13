@@ -1,6 +1,6 @@
 # Files Changed in SwiftUI Migration
 
-## New Files Created ✨
+## New Files Created
 
 ### SwiftUI Implementation
 
@@ -16,7 +16,7 @@
 7. **BEFORE_AFTER.md** - Before/after comparison
 8. **FILES_CHANGED.md** - This file
 
-## Modified Files ✏️
+## Modified Files
 
 ### Core Implementation
 
@@ -36,7 +36,7 @@
    
    - Added new SwiftUI files to project
    - Removed XIB files from build phases
-   - Updated MACOSX_DEPLOYMENT_TARGET to 11.0
+   - Updated MACOSX_DEPLOYMENT_TARGET to 14.0
    - Updated SWIFT_VERSION to 5.9
    - Cleaned up old file references
 
@@ -50,7 +50,7 @@
    - Added system requirements
    - Linked to migration documentation
 
-## Deprecated Files (Not Used, Kept for Reference) ⚠️
+## Deprecated Files
 
 ### XIB Interface Files
 
@@ -71,7 +71,7 @@
 9. Classes/Views/LineNumberView.swift
 10. Classes/Extensions/NSTextView+LineNumber.swift
 
-## Unchanged Files ✅
+## Unchanged Files
 
 ### Still Active
 
@@ -102,10 +102,3 @@
 - XIB files: 0 active (3 deprecated)
 - Total active UI files: 12 Swift (all SwiftUI/business logic)
 
-## Impact Assessment
-
-✅ **Zero Breaking Changes** - All deprecated files kept for reference
-✅ **Full Functionality** - All features preserved or enhanced
-✅ **Modern Stack** - SwiftUI, Swift 5.9, macOS 11+
-✅ **Well Documented** - 5 comprehensive documentation files
-✅ **Clean Architecture** - Clear separation of concerns

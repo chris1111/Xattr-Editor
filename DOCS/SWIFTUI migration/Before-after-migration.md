@@ -200,35 +200,13 @@ class Attribute: ObservableObject, Identifiable {
 - **Added**: ~300 lines of clean SwiftUI views
 - **Net Result**: More maintainable, less code overall
 
-### Modern Features
-
-✅ Declarative syntax
-✅ Automatic state management
-✅ Built-in animations
-✅ Reactive updates
-✅ Type-safe UI construction
-✅ Live previews in Xcode
-
-### Developer Experience
-
-- No more Interface Builder wiring
-- No more IBOutlet connections
-- No more manual constraint management
-- Preview changes instantly
-- Better compile-time safety
-- Easier testing
-
 ## Compatibility Matrix
 
 | Aspect | Before | After |
 |--------|--------|-------|
-| Minimum macOS | 10.12 Sierra | 11.0 Big Sur |
+| Minimum macOS | 10.12 Sierra | 14.0 Sonoma |
 | Swift Version | 4.2 | 5.9 |
 | Xcode Version | 8+ | 15+ |
 | UI Framework | AppKit + XIB | SwiftUI |
 | Architecture | MVC | MVVM |
 | State Management | Manual | @Published/@State |
-
-## Conclusion
-
-The migration from XIB/Storyboard to SwiftUI represents a significant modernization of the codebase. While some deprecated files remain in the repository for reference, the new SwiftUI implementation is cleaner, more maintainable, and ready for future enhancements.
