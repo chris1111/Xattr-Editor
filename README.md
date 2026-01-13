@@ -45,4 +45,5 @@ When removing an attribute, the user receives feedback. E.g., removing the com.a
 - Clear the attribute value field when deleting attributes
 - Re-show drop file window when closing attribute inspector
 - Improve README and documentation
-- Update scsreenshots.
+- Update scsreenshots
+- Migrate storyboard project to SwiftUI.
