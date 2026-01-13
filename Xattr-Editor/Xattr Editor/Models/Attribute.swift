@@ -5,14 +5,18 @@
 //  Created by Richard Csiko on 2017. 01. 21..
 //
 
-class Attribute {
+import Combine
+import Foundation
+
+class Attribute: ObservableObject, Identifiable {
+    let id = UUID()
     var originalName: String
     var originalValue: String?
 
-    var name: String
-    var value: String?
+    @Published var name: String
+    @Published var value: String?
     var isModified: Bool {
-        return name != originalName || value != originalValue
+        name != originalName || value != originalValue
     }
 
     init(name: String, value: String? = nil) {
@@ -26,5 +30,15 @@ class Attribute {
     func updateOriginalValues() {
         originalName = name
         originalValue = value
+    }
+}
+
+extension Attribute: Hashable {
+    static func == (lhs: Attribute, rhs: Attribute) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

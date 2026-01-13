@@ -2,6 +2,18 @@
 
 <img src="Images/Appicon-64.png" width="64px">
 
+## Versión SwiftUI
+
+**¡Novedad!** Este proyecto ha sido migrado desde XIB storyboard a SwiftUI, adoptando el marco de trabajo moderno y declarativo para interfaces de usuario en macOS. 
+
+La app ahora requiere:
+
+- **Xcode 15** o superior
+- **macOS 14.0** o superior
+- **Swift 5.9**
+
+## Introducción
+
 Xattr Editor es una sencilla aplicación GUI para ver y editar atributos extendidos de archivos en macOS, ideal para usuarios que prefieren una interfaz gráfica (arrastrar y soltar un archivo y ver sus atributos extendidos) en lugar de abrir la Terminal e interactuar con `xattr`. Con la ventaja adicional de que los atributos se pueden editar uno por uno, añadiendo, modificando o eliminando cualquiera de ellos.
 
 La desventaja de Xattr Editor es que, al ser una aplicación descargada de internet, también muestra la advertencia de Gatekeeper al ejecutarse por primera vez. Esto es inevitable, ya que la aplicación solo está firmada ad hoc y no está notarizada. Esto no ocurre si se descarga el código fuente, se compila la aplicación con Xcode y se usa el producto ejecutable para su uso habitual.

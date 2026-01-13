@@ -7,39 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		118101C2212FEC4200B0BDEF /* NSTextView+LineNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118101C1212FEC4200B0BDEF /* NSTextView+LineNumber.swift */; };
-		118101C4212FEC7200B0BDEF /* LineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118101C3212FEC7200B0BDEF /* LineNumberView.swift */; };
 		47CD50BB40FE331F673DB858 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09FEBBDB493296B625F15386 /* Localizable.strings */; };
-		A101B0121E35FFF500C432C6 /* DragDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101B0111E35FFF500C432C6 /* DragDestinationView.swift */; };
-		C032A5D02F164C7200EAC461 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C032A5CF2F164C7200EAC461 /* MainMenu.xib */; };
+		AA0000011E34BA6100A3E79B /* XattrEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */; };
+		AA0000021E34BA6100A3E79B /* OpenFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000011E34BA6100A3E79A /* OpenFileView.swift */; };
+		AA0000031E34BA6100A3E79B /* AttributeInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */; };
 		FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0C1E336D0800908B25 /* Assets.xcassets */; };
-		FBC0D2CB1E34BA6100A3E79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C11E34BA6100A3E79B /* AppDelegate.swift */; };
 		FBC0D2CC1E34BA6100A3E79B /* URL+XAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */; };
 		FBC0D2CD1E34BA6100A3E79B /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C51E34BA6100A3E79B /* Attribute.swift */; };
-		FBC0D2CE1E34BA6100A3E79B /* AttributeInspectorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC0D2C71E34BA6100A3E79B /* AttributeInspectorWindow.xib */; };
-		FBC0D2CF1E34BA6100A3E79B /* AttributeInspectorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C81E34BA6100A3E79B /* AttributeInspectorWindowController.swift */; };
-		FBC0D2D01E34BA6100A3E79B /* OpenFileWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC0D2C91E34BA6100A3E79B /* OpenFileWindow.xib */; };
-		FBC0D2D11E34BA6100A3E79B /* OpenFileWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2CA1E34BA6100A3E79B /* OpenFileWindowController.swift */; };
-		FBC0D2D41E34BDD200A3E79B /* AttributeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2D31E34BDD200A3E79B /* AttributeCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		118101C1212FEC4200B0BDEF /* NSTextView+LineNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+LineNumber.swift"; sourceTree = "<group>"; };
-		118101C3212FEC7200B0BDEF /* LineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumberView.swift; sourceTree = "<group>"; };
-		A101B0111E35FFF500C432C6 /* DragDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDestinationView.swift; sourceTree = "<group>"; };
-		C032A5CF2F164C7200EAC461 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XattrEditorApp.swift; sourceTree = "<group>"; };
+		AA0000011E34BA6100A3E79A /* OpenFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenFileView.swift; sourceTree = "<group>"; };
+		AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeInspectorView.swift; sourceTree = "<group>"; };
 		EC29F5F764AA19394D28F707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB8A8B071E336D0800908B25 /* Xattr Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xattr Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8A8B0C1E336D0800908B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB8A8B111E336D0800908B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBC0D2C11E34BA6100A3E79B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+XAttr.swift"; sourceTree = "<group>"; };
 		FBC0D2C51E34BA6100A3E79B /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
-		FBC0D2C71E34BA6100A3E79B /* AttributeInspectorWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributeInspectorWindow.xib; sourceTree = "<group>"; };
-		FBC0D2C81E34BA6100A3E79B /* AttributeInspectorWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeInspectorWindowController.swift; sourceTree = "<group>"; };
-		FBC0D2C91E34BA6100A3E79B /* OpenFileWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenFileWindow.xib; sourceTree = "<group>"; };
-		FBC0D2CA1E34BA6100A3E79B /* OpenFileWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenFileWindowController.swift; sourceTree = "<group>"; };
-		FBC0D2D31E34BDD200A3E79B /* AttributeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,39 +67,20 @@
 			isa = PBXGroup;
 			children = (
 				FB8A8B0C1E336D0800908B25 /* Assets.xcassets */,
-				FBC0D2BF1E34BA6100A3E79B /* Classes */,
+				FBC0D2C21E34BA6100A3E79B /* Extensions */,
 				FB8A8B111E336D0800908B25 /* Info.plist */,
-				C032A5CF2F164C7200EAC461 /* MainMenu.xib */,
+				FBC0D2C41E34BA6100A3E79B /* Models */,
 				C032A5CE2F164C4000EAC461 /* Resources */,
+				FBC0D2D21E34BDB700A3E79B /* Views */,
+				AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */,
 			);
 			path = "Xattr Editor";
-			sourceTree = "<group>";
-		};
-		FBC0D2BF1E34BA6100A3E79B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				FBC0D2C01E34BA6100A3E79B /* Appdelegate */,
-				FBC0D2C21E34BA6100A3E79B /* Extensions */,
-				FBC0D2C41E34BA6100A3E79B /* Models */,
-				FBC0D2D21E34BDB700A3E79B /* Views */,
-				FBC0D2C61E34BA6100A3E79B /* WindowControllers */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		FBC0D2C01E34BA6100A3E79B /* Appdelegate */ = {
-			isa = PBXGroup;
-			children = (
-				FBC0D2C11E34BA6100A3E79B /* AppDelegate.swift */,
-			);
-			path = Appdelegate;
 			sourceTree = "<group>";
 		};
 		FBC0D2C21E34BA6100A3E79B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */,
-				118101C1212FEC4200B0BDEF /* NSTextView+LineNumber.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -126,23 +93,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FBC0D2C61E34BA6100A3E79B /* WindowControllers */ = {
-			isa = PBXGroup;
-			children = (
-				FBC0D2C81E34BA6100A3E79B /* AttributeInspectorWindowController.swift */,
-				FBC0D2C71E34BA6100A3E79B /* AttributeInspectorWindow.xib */,
-				FBC0D2CA1E34BA6100A3E79B /* OpenFileWindowController.swift */,
-				FBC0D2C91E34BA6100A3E79B /* OpenFileWindow.xib */,
-			);
-			path = WindowControllers;
-			sourceTree = "<group>";
-		};
 		FBC0D2D21E34BDB700A3E79B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FBC0D2D31E34BDD200A3E79B /* AttributeCellView.swift */,
-				A101B0111E35FFF500C432C6 /* DragDestinationView.swift */,
-				118101C3212FEC7200B0BDEF /* LineNumberView.swift */,
+				AA0000011E34BA6100A3E79A /* OpenFileView.swift */,
+				AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,9 +162,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBC0D2CE1E34BA6100A3E79B /* AttributeInspectorWindow.xib in Resources */,
-				C032A5D02F164C7200EAC461 /* MainMenu.xib in Resources */,
-				FBC0D2D01E34BA6100A3E79B /* OpenFileWindow.xib in Resources */,
 				FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */,
 				47CD50BB40FE331F673DB858 /* Localizable.strings in Resources */,
 			);
@@ -244,15 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBC0D2D11E34BA6100A3E79B /* OpenFileWindowController.swift in Sources */,
-				118101C4212FEC7200B0BDEF /* LineNumberView.swift in Sources */,
 				FBC0D2CD1E34BA6100A3E79B /* Attribute.swift in Sources */,
-				FBC0D2CB1E34BA6100A3E79B /* AppDelegate.swift in Sources */,
-				118101C2212FEC4200B0BDEF /* NSTextView+LineNumber.swift in Sources */,
-				A101B0121E35FFF500C432C6 /* DragDestinationView.swift in Sources */,
-				FBC0D2D41E34BDD200A3E79B /* AttributeCellView.swift in Sources */,
-				FBC0D2CF1E34BA6100A3E79B /* AttributeInspectorWindowController.swift in Sources */,
 				FBC0D2CC1E34BA6100A3E79B /* URL+XAttr.swift in Sources */,
+				AA0000011E34BA6100A3E79B /* XattrEditorApp.swift in Sources */,
+				AA0000021E34BA6100A3E79B /* OpenFileView.swift in Sources */,
+				AA0000031E34BA6100A3E79B /* AttributeInspectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -371,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -385,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				INFOPLIST_FILE = "Xattr Editor/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -393,11 +341,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rcsiko.Xattr-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.9;
 			};
 			name = Debug;
 		};
@@ -406,7 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				INFOPLIST_FILE = "Xattr Editor/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -414,11 +362,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rcsiko.Xattr-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.9;
 			};
 			name = Release;
 		};

@@ -15,9 +15,8 @@ extension URL {
             throw NSError(domain: String(cString: strerror(errno)), code: Int(errno), userInfo: nil)
         }
 
-        try data.withUnsafeBytes { (u8Ptr: UnsafePointer<UInt8>) in
-            let rawPtr = UnsafeRawPointer(u8Ptr)
-            if setxattr(self.path, name, rawPtr, data.count, 0, 0) == xattrResultError {
+        try data.withUnsafeBytes { (bufferPtr: UnsafeRawBufferPointer) in
+            if setxattr(self.path, name, bufferPtr.baseAddress, data.count, 0, 0) == xattrResultError {
                 throw NSError(domain: String(cString: strerror(errno)), code: Int(errno), userInfo: nil)
             }
         }
