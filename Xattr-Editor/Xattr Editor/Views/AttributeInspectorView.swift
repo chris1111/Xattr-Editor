@@ -99,7 +99,13 @@ struct AttributeInspectorView: View {
         .onChange(of: selectedAttribute) { _, newValue in
             attributeValue = newValue?.value ?? ""
         }
-        .alert(NSLocalizedString("add_attribute_alert_title", comment: "Add attribute alert title"), isPresented: $showingAddAlert) {
+        .alert(
+            NSLocalizedString(
+                "add_attribute_alert_title",
+                comment: "Add attribute alert title"
+            ),
+            isPresented: $showingAddAlert
+        ) {
             TextField(
                 NSLocalizedString("add_attribute_title", comment: "Add attribute dialog title"),
                 text: $newAttributeName

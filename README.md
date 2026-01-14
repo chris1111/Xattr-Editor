@@ -4,7 +4,7 @@
 
 ## SwiftUI Version
 
-**New!** This project has been migrated from XIB storyboard to SwiftUI, providing a modern, declarative UI framework. The app now requires:
+**New!** This project has been migrated from XIB storyboard to SwiftUI, providing a modern UI framework. The app now requires:
 
 - **Xcode 15** or later
 - **macOS 14.0** or later

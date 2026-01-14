@@ -1,4 +1,4 @@
-com.xattr2.settings
+com.xattr-editor.settings
 
 {
 "inspectorMode" : false
