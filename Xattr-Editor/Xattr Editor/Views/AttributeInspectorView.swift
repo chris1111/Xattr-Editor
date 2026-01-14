@@ -70,7 +70,7 @@ struct AttributeInspectorView: View {
                 }
                 .listStyle(.inset)
             }
-            .frame(width: 290, height: 380)
+            .frame(width: 330, height: 380)
             .padding(.leading, 10)
 
             Divider()
@@ -91,7 +91,7 @@ struct AttributeInspectorView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-            .frame(width: 380, height: 389)
+            .frame(width: 340, height: 389)
         }
         .frame(width: 690, height: 400)
         .navigationTitle(fileURL.lastPathComponent)
@@ -202,9 +202,10 @@ struct AttributeRowView: View {
     @ObservedObject var attribute: Attribute
 
     var body: some View {
-        HStack {
-            TextField("", text: $attribute.name)
+        HStack(alignment: .top) {
+            TextField("", text: $attribute.name, axis: .vertical)
                 .textFieldStyle(.plain)
+                .lineLimit(nil)
                 .onSubmit {
                     // Attribute name change will be handled by the parent view
                 }
@@ -213,6 +214,7 @@ struct AttributeRowView: View {
                 Image(systemName: "circle.fill")
                     .font(.system(size: 6))
                     .foregroundColor(.accentColor)
+                    .padding(.top, 2)
             }
         }
     }
