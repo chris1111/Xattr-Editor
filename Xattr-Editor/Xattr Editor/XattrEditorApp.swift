@@ -17,6 +17,7 @@ struct XattrEditorApp: App {
             OpenFileView()
                 .environmentObject(appState)
                 .frame(width: 500, height: 425)
+                .windowLiquidGlass()
         }
         .windowResizability(.contentSize)
         .defaultPosition(.center)
@@ -34,6 +35,7 @@ struct XattrEditorApp: App {
             if let windowData {
                 AttributeInspectorView(fileURL: windowData.fileURL, windowId: windowData.id)
                     .environmentObject(appState)
+                    .windowLiquidGlass()
             }
         }
         .windowResizability(.contentSize)
@@ -62,7 +64,7 @@ class AppState: ObservableObject {
     }
 }
 
-struct InspectorWindowData: Identifiable, Hashable, Codable {
+struct InspectorWindowData: Identifiable, Hashable, Encodable, Decodable {
     let id: UUID
     let fileURL: URL
 

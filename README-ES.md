@@ -4,7 +4,7 @@
 
 ## Versión SwiftUI
 
-**¡Novedad!** Este proyecto ha sido migrado desde XIB storyboard a SwiftUI, adoptando el marco de trabajo moderno y declarativo para interfaces de usuario en macOS. 
+Este proyecto ha sido migrado desde XIB storyboard a SwiftUI, adoptando el marco de trabajo moderno para interfaces de usuario en macOS, con soporte para efecto Liquid Glass en macOS 15+. 
 
 La app ahora requiere:
 
@@ -34,7 +34,9 @@ Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos
 
 Al eliminar un atributo, el usuario recibe una notificación. Por ejemplo, eliminar el atributo `com.apple.quarantine`:
 
-<img  src="Images/App3-ES.png" width="660">
+### Compatibilidad con Liquid Glass
+
+La app es compatible con el efecto Liquid Glass (material translúcido) para macOS 15 (Sequoia) y versiones posteriores, incluyendo macOS 26 (Tahoe), manteniendo al mismo tiempo la retrocompatibilidad total con macOS 14.
 
 ## Créditos
 
@@ -51,4 +53,5 @@ Registro de los cambios que yo he hecho:
 - Mejorar el archivo README y la documentación
 - Actualizar las capturas de pantalla
 - Añadir el idioma español
-- Migrar el proyecto de storyboard a SwiftUI.
+- Migrar el proyecto de storyboard a SwiftUI
+- Añadir soporte para Liquid Glass en macOS 15+ manteniendo compatibilidad hacia atrás con macOS 14.

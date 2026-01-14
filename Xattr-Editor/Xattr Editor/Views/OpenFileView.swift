@@ -18,6 +18,11 @@ struct OpenFileView: View {
             Spacer()
 
             ZStack {
+                // Liquid Glass background layer
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.clear)
+                    .adaptiveMaterialBackground(type: .window)
+
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(
                         isDragging ? Color.accentColor : Color.gray,

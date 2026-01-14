@@ -4,7 +4,7 @@
 
 ## SwiftUI Version
 
-**New!** This project has been migrated from XIB storyboard to SwiftUI, providing a modern UI framework. The app now requires:
+**New!** This project has been migrated from XIB storyboard to SwiftUI, providing a modern UI framework with Liquid Glass effect support for macOS 15+. The app now requires:
 
 - **Xcode 15** or later
 - **macOS 14.0** or later
@@ -32,7 +32,9 @@ You can add, rename, delete, or modify properties of existing attributes.
 
 When removing an attribute, the user receives feedback. E.g., removing the com.apple.quarantine attribute:
 
-<img  src="Images/App3.png" width="660">
+### Liquid Glass Support
+
+The app includes Liquid Glass (translucent material) effect support for macOS 15 (Sequoia) and later, including macOS 26 (Tahoe) while maintaining full backward compatibility with macOS 14.
 
 ## Credits
 
@@ -49,4 +51,5 @@ Changelog oy my additions:
 - Improve README and documentation
 - Update scsreenshots
 - Add Spanish language
-- Migrate storyboard project to SwiftUI.
+- Migrate storyboard project to SwiftUI
+- Add Liquid Glass support for macOS 15+ with backward compatibility for macOS 14.

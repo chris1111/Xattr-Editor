@@ -57,7 +57,7 @@ struct AttributeInspectorView: View {
                     .help(NSLocalizedString("help_close", comment: "Close button help"))
                 }
                 .padding(6)
-                .background(Color(nsColor: .controlBackgroundColor))
+                .adaptiveMaterialBackground(type: .control)
 
                 Divider()
 

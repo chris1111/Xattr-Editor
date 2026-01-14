@@ -11,6 +11,7 @@
 		AA0000011E34BA6100A3E79B /* XattrEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */; };
 		AA0000021E34BA6100A3E79B /* OpenFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000011E34BA6100A3E79A /* OpenFileView.swift */; };
 		AA0000031E34BA6100A3E79B /* AttributeInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */; };
+		D95039F42F184BAD0086B703 /* Material+LiquidGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */; };
 		FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0C1E336D0800908B25 /* Assets.xcassets */; };
 		FBC0D2CC1E34BA6100A3E79B /* URL+XAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */; };
 		FBC0D2CD1E34BA6100A3E79B /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C51E34BA6100A3E79B /* Attribute.swift */; };
@@ -20,6 +21,7 @@
 		AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XattrEditorApp.swift; sourceTree = "<group>"; };
 		AA0000011E34BA6100A3E79A /* OpenFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenFileView.swift; sourceTree = "<group>"; };
 		AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeInspectorView.swift; sourceTree = "<group>"; };
+		D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Material+LiquidGlass.swift"; sourceTree = "<group>"; };
 		D95DB6522F18188400472969 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC29F5F764AA19394D28F707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB8A8B071E336D0800908B25 /* Xattr Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xattr Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */,
+				D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				AA0000011E34BA6100A3E79B /* XattrEditorApp.swift in Sources */,
 				AA0000021E34BA6100A3E79B /* OpenFileView.swift in Sources */,
 				AA0000031E34BA6100A3E79B /* AttributeInspectorView.swift in Sources */,
+				D95039F42F184BAD0086B703 /* Material+LiquidGlass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +351,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rcsiko.Xattr-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.9;
@@ -368,7 +372,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rcsiko.Xattr-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.9;
