@@ -35,3 +35,20 @@ Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos
 Al eliminar un atributo, el usuario recibe una notificación. Por ejemplo, eliminar el atributo `com.apple.quarantine`:
 
 <img  src="Images/App3-ES.png" width="660">
+
+## Créditos
+
+*rcsiko* es el autor del repositorio original [xattr-editor](https://github.com/rcsiko/xattr-editor), que no se ha actualizado en 7 años. He creado mi propio repositorio basado en el original, que contiene la parte más importante del código fuente.
+
+Registro de los cambios que yo he hecho:
+
+- Añadir icono de la aplicación en Assets.xcassets
+- Corregir las advertencias de `swiftlint` y refactorizar el código Swift
+- Añadir aviso al usuario (alerta) en la eliminación de atributos
+- Corregir la advertencia de error al renombrar atributos
+- Borrar el campo de valor del atributo al eliminar atributos
+- Volver a mostrar la ventana de soltar archivo al cerrar el inspector de atributos
+- Mejorar el archivo README y la documentación
+- Actualizar las capturas de pantalla
+- Añadir el idioma español
+- Migrar el proyecto de storyboard a SwiftUI.
