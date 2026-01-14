@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Xattr Editor
+
+  English localization
+*/
+
+/* Error messages */
+"error_code" = "Código de error: %d";
+"error_title" = "Error";
+
+/* Add attribute dialog */
+"add_attribute_title" = "Nombre de atributo exgendido:";
+"add_attribute_alert_title" = "Añadir Atributo";
+"ok" = "OK";
+"cancel" = "Cancelar";
+
+/* Success messages */
+"attribute_removed_title" = "Atributo Eliminado";
+"attribute_removed_message" = "El atributo '%@' ha sido eliminado correctamente.";
+
+/* Button help texts */
+"help_refresh" = "Actualizar";
+"help_add_attribute" = "Añadir Atributo";
+"help_remove_attribute" = "Eliminar Atributo";
+"help_close" = "Cerrar";
+
+/* Attribute editor texts */
+"select_attribute_message" = "Elige un atributo para ver su valor";
+
+/* Open file view texts */
+"drop_file_here" = "Arrastra un archivo aquí";
+"or" = "o";
+"choose_file" = "Elige un archivo";
+
+/* Application and menu texts */
+"app_title" = "Xattr Editor";
+"menu_open" = "Abrir...";
