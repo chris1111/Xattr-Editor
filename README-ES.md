@@ -24,14 +24,14 @@ Este [documento](DOCS/App-damaged-ES.md) amplía la información sobre la advert
 
 Es muy fácil de usar. Al iniciar la aplicación, aparece una ventana donde puedes arrastrar y soltar archivos.
 
-<img src="Images/App1.png" width="256">
+<img src="Images/App1-ES.png" width="512">
 
 También puedes usar el menú Archivo >> Abrir (Cmd + O), que te permite seleccionar un archivo en lugar de arrastrarlo a la ventana. En ambos casos, se abre la ventana principal con los atributos extendidos (si los hay) y sus propiedades.
 
-![App](Images/App2.png)
+<img  src="Images/App2.png" width="660">
 
 Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos existentes.
 
 Al eliminar un atributo, el usuario recibe una notificación. Por ejemplo, eliminar el atributo `com.apple.quarantine`:
 
-![App](Images/App3.png)
+<img  src="Images/App3-ES.png" width="660">
