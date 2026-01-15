@@ -4,7 +4,7 @@
 
 ## SwiftUI Version
 
-**New!** This project has been migrated from XIB storyboard to SwiftUI, providing a modern UI framework with Liquid Glass effect support for macOS 15+. The app now requires:
+This project has been migrated from XIB storyboard to SwiftUI, providing a modern UI framework with Liquid Glass effect support for macOS 15+. The app now requires:
 
 - **Xcode 15** or later
 - **macOS 14.0** or later
@@ -22,15 +22,16 @@ This [document](DOCS/App-damaged.md) expands on the information about the securi
 
 It's really simple to use. When you start the app, a window appears where you can drag and drop files.
 
-<img  alt="macOS 14 Sonoma" src="Images/App1-14.png" width="500">
 
-<img  alt="macOS 26 Tahoe"  src="Images/App1.png" width="400">
+<img  alt="macOS 14 Sonoma" src="Images/App1-14.png" width=“400">
+
+<img  alt="macOS 26 Tahoe"  src="Images/App1.png" width=“400">
 
 You can also use the File >> Open menu (Cmd + O), which allows you to select a file instead of dragging it onto the window. Either way, the main window opens with the extended attribute(s) (if any) and their properties.
 
-<img  alt="macOS 14 Sonoma" src="Images/App2-14.png" width="500">
+<img  alt="macOS 14 Sonoma" src="Images/App2-14.png" width=“400">
 
-<img  alt="macOS 26 Tahoe"  src="Images/App2.png" width="400">
+<img  alt="macOS 26 Tahoe"  src="Images/App2.png" width=“400">
 
 You can add, rename, delete, or modify properties of existing attributes.
 
