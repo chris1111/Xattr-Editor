@@ -24,11 +24,13 @@ Este [documento](DOCS/App-damaged-ES.md) amplía la información sobre la advert
 
 Es muy fácil de usar. Al iniciar la aplicación, aparece una ventana donde puedes arrastrar y soltar archivos.
 
-<img src="Images/App1-ES.png" width="512">
+<img  alt="macOS 14 Sonoma" src="Images/App1-ES-14.png" width="500">
+
+<img  alt="macOS 26 Tahoe"  src="Images/App1-ES.png" width="400">
+
+**Nota**: primera imagen en Sonoma (sin Liquid Glass), segunda en Tahoe (Soporte para Liquid Glass).
 
 También puedes usar el menú Archivo >> Abrir (Cmd + O), que te permite seleccionar un archivo en lugar de arrastrarlo a la ventana. En ambos casos, se abre la ventana principal con los atributos extendidos (si los hay) y sus propiedades.
-
-<img  src="Images/App2-ES.png" width="660">
 
 Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos existentes.
 
