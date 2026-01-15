@@ -28,7 +28,7 @@ Es muy fácil de usar. Al iniciar la aplicación, aparece una ventana donde pued
 
 <img  alt="macOS 26 Tahoe"  src="Images/App1-ES.png" width="400">
 
-**Nota**: primera imagen en Sonoma (sin Liquid Glass), segunda en Tahoe (Soporte para Liquid Glass).
+**Nota**: primera imagen en Sonoma (sin Liquid Glass), segunda en Tahoe (soporte para Liquid Glass).
 
 También puedes usar el menú Archivo >> Abrir (Cmd + O), que te permite seleccionar un archivo en lugar de arrastrarlo a la ventana. En ambos casos, se abre la ventana principal con los atributos extendidos (si los hay) y sus propiedades.
 
