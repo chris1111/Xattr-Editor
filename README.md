@@ -22,7 +22,6 @@ This [document](DOCS/App-damaged.md) expands on the information about the securi
 
 It's really simple to use. When you start the app, a window appears where you can drag and drop files.
 
-
 <img  alt="macOS 14 Sonoma" src="Images/App1-14.png" width=“400">
 
 <img  alt="macOS 26 Tahoe"  src="Images/App1.png" width=“400">
