@@ -32,7 +32,7 @@ También puedes usar el menú Archivo >> Abrir (Cmd + O), que te permite selecci
 
 Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos existentes.
 
-Al eliminar un atributo, el usuario recibe una notificación. Por ejemplo, eliminar el atributo `com.apple.quarantine`:
+Al eliminar un atributo, el usuario recibe una notificación. 
 
 ### Compatibilidad con Liquid Glass
 
